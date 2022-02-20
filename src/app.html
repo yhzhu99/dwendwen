@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="%svelte.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%svelte.head%
-	</head>
-	<body>
-		<div>%svelte.body%</div>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <link rel="icon" href="%svelte.assets%/favicon.png" />
+    <script type="text/javascript" src="%svelte.assets%/drawCanvas.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    %svelte.head%
+  </head>
+  <body>
+    <main class="flex items-center justify-center min-h-screen bg-sky-500/[.1]">
+      <canvas height="1262" id="mainCanvas" width="1068"
+        >您的浏览器不支持HTML5 canvas，请换一个浏览器。</canvas
+      >
+      <div>%svelte.body%</div>
+    </main>
+  </body>
 </html>
+
+<script>
+  window.onload = function () {
+    let width = mainCanvas.width;
+    let height = mainCanvas.height;
+    let zoomW = mainCanvas.width / document.documentElement.clientWidth;
+    let zoomH = mainCanvas.height / document.documentElement.clientHeight;
+    zoomW = 1 / zoomW;
+    zoomH = 1 / zoomH;
+    zoomW = Math.floor(zoomW * 100) * 0.01 - 0.05;
+    zoomH = Math.floor(zoomH * 100) * 0.01 - 0.05;
+    // if(zoomW>0.9)
+    //   zoomW=0.9
+    // if(zoomH>0.9)
+    //   zoomH=0.9
+    let zoom = Math.min(zoomW, zoomH);
+    mainCanvas.style.zoom = zoom;
+
+    StyleKitName.drawCanvas1("mainCanvas");
+  };
+</script>
