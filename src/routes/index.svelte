@@ -27,10 +27,10 @@
 </svelte:head>
 
 <main class="flex items-center justify-center min-h-screen bg-sky-500/[.5]">
-  <canvas height="1262" id="mainCanvas" width="1068"
+  <canvas height="1262" id="mainCanvas" width="1068" class="mr-5"
     >Your browser does not support the HTML5 CANVAS tag!</canvas
   >
-  <div class="search">
+  <div class="ml-5">
     <div
       class="font-mono text-2xl mb-5 font-bold text-slate-50 underline decoration-dashed"
     >
