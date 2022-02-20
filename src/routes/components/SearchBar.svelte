@@ -4,6 +4,8 @@
     { id: 1, text: `Google`, url: "https://www.google.com.hk/search?q=" },
     { id: 2, text: `Bing`, url: "https://cn.bing.com/search?q=" },
     { id: 3, text: `Baidu`, url: "https://www.baidu.com/s?ie=utf-8&word=" },
+    { id: 4, text: `Google Scholar`, url: "https://scholar.google.com/scholar?q=" },
+    { id: 5, text: `GitHub`, url: "https://github.com/search?q=" },
   ];
   let selected;
   let question = "";
