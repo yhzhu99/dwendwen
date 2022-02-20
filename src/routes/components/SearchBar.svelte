@@ -1,20 +1,24 @@
 <script>
   import { goto } from "$app/navigation";
   let searchEngines = [
-    { id: 1, text: `Google`, url: "https://www.google.com.hk/search?q=" },
-    { id: 2, text: `Bing`, url: "https://cn.bing.com/search?q=" },
-    { id: 3, text: `Baidu`, url: "https://www.baidu.com/s?ie=utf-8&word=" },
-    { id: 4, text: `Google Scholar`, url: "https://scholar.google.com/scholar?q=" },
-    { id: 5, text: `GitHub`, url: "https://github.com/search?q=" },
-    { id: 6, text: `arXiv`, url: "https://arxiv.org/search/?searchtype=all&source=header&query=" },
-    { id: 7, text: `ReadPaper`, url: "https://readpaper.com/search/" },
+    { id: 1, text: `Google`, url: "https://www.google.com.hk/search?q=", home: "https://www.google.com.hk"},
+    { id: 2, text: `Bing`, url: "https://cn.bing.com/search?q=" , home:"https://cn.bing.com"},
+    { id: 3, text: `Baidu`, url: "https://www.baidu.com/s?ie=utf-8&word=", home: "https://www.baidu.com"},
+    { id: 4, text: `Google Scholar`, url: "https://scholar.google.com/scholar?q=", home: "https://scholar.google.com"},
+    { id: 5, text: `GitHub`, url: "https://github.com/search?q=", home: "https://github.com"},
+    { id: 6, text: `arXiv`, url: "https://arxiv.org/search/?searchtype=all&source=header&query=",  home: "https://arxiv.org"},
+    { id: 7, text: `ReadPaper`, url: "https://readpaper.com/search/", home: "https://readpaper.com"},
   ];
   let selected;
   let question = "";
   function handleSearch() {
-    console.log("search:", question);
-    console.log("selected:", selected.id, selected.text);
-    goto(selected.url + question);
+    if (question.trim() == []) {
+      // window.open(selected.home)
+      goto(selected.home);
+    } else{
+      // window.open(selected.url + question)
+      goto(selected.url + question);
+    }
   }
 </script>
 
