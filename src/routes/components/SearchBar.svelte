@@ -1,5 +1,5 @@
 <script>
-  import { goto } from "$app/navigation";
+  // import { goto } from "$app/navigation";
   let searchEngines = [
     { id: 1, text: `Google`, url: "https://www.google.com.hk/search?q=", home: "https://www.google.com.hk"},
     { id: 2, text: `Bing`, url: "https://cn.bing.com/search?q=" , home:"https://cn.bing.com"},
@@ -13,11 +13,11 @@
   let question = "";
   function handleSearch() {
     if (question.trim() == []) {
-      // window.open(selected.home)
-      goto(selected.home);
+      window.open(selected.home)
+      // goto(selected.home);
     } else{
-      // window.open(selected.url + question)
-      goto(selected.url + question);
+      window.open(selected.url + question)
+      // goto(selected.url + question);
     }
   }
 </script>
