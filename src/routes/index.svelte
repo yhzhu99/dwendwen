@@ -26,16 +26,25 @@
   <title>墩墩起始页</title>
 </svelte:head>
 
-<main class="flex items-center justify-center min-h-screen bg-sky-500/[.5]">
-  <canvas height="1262" id="mainCanvas" width="1068" class="mr-5"
-    >Your browser does not support the HTML5 CANVAS tag!</canvas
-  >
-  <div class="ml-5">
-    <div
-      class="font-mono text-2xl mb-5 font-bold text-slate-50 underline decoration-dashed"
+<main class="flex items-center flex-col justify-center min-h-screen bg-sky-500/[.5]">
+  <div class="flex items-center">
+    <canvas height="1262" id="mainCanvas" width="1068" class="mr-5"
+      >Your browser does not support the HTML5 CANVAS tag!</canvas
     >
-      Together for a Shared Future
+    <div class="ml-5">
+      <div
+        class="font-mono text-2xl mb-5 font-bold text-slate-50 underline decoration-dashed"
+      >
+        Together for a Shared Future
+      </div>
+      <SearchBar />
     </div>
-    <SearchBar />
   </div>
+
+  <footer class="place-self-end mr-5">
+    <div class="text-center p-2 text-sm rounded bg-sky-500/[.2]">
+      <span class="text-white">© 2022 Copyright: </span>
+      <a class="text-white" href="https://github.com/TualatinX">Yinghao Zhu</a>
+    </div>  
+  </footer>
 </main>
