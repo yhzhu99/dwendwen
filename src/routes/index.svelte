@@ -1,15 +1,41 @@
 <script>
-  import SearchBar from "./components/SearchBar.svelte"
+  import SearchBar from "./components/SearchBar.svelte";
+  import { onMount } from "svelte";
+  onMount(async () => {
+    let zoomW = mainCanvas.width / document.documentElement.clientWidth;
+    let zoomH = mainCanvas.height / document.documentElement.clientHeight;
+    zoomW = 1 / zoomW;
+    zoomH = 1 / zoomH;
+    zoomW = Math.floor(zoomW * 100) * 0.01 - 0.05;
+    zoomH = Math.floor(zoomH * 100) * 0.01 - 0.05;
+
+    let zoom = Math.min(zoomW, zoomH);
+    mainCanvas.style.zoom = zoom;
+
+    StyleKitName.drawCanvas1("mainCanvas");
+  });
 </script>
 
 <svelte:head>
-  <meta charset="UTF-8">
-  <meta name="keywords" content="墩墩起始页,主页,导航,起始页,朱英豪">
-  <meta name="description" content="墩墩起始页由朱英豪开发,整合了多个搜索引擎,便捷好用,一起向未来!">
-  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover">
-	<title>墩墩起始页</title>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="墩墩起始页,主页,导航,起始页,朱英豪" />
+  <meta
+    name="description"
+    content="墩墩起始页由朱英豪开发,冰墩墩主题,整合了多个学术搜索引擎,便捷好用,一起向未来!"
+  />
+  <title>墩墩起始页</title>
 </svelte:head>
 
-<div class="font-mono text-2xl mb-5 font-bold text-slate-50 underline decoration-dashed">Together for a Shared Future</div>
-
-<SearchBar/>
+<main class="flex items-center justify-center min-h-screen bg-sky-500/[.5]">
+  <canvas height="1262" id="mainCanvas" width="1068"
+    >Your browser does not support the HTML5 CANVAS tag!</canvas
+  >
+  <div class="search">
+    <div
+      class="font-mono text-2xl mb-5 font-bold text-slate-50 underline decoration-dashed"
+    >
+      Together for a Shared Future
+    </div>
+    <SearchBar />
+  </div>
+</main>
