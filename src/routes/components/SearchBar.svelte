@@ -1,7 +1,24 @@
-<div
+<script>
+  import { goto } from "$app/navigation";
+  let searchEngines = [
+    { id: 1, text: `Google`, url: "https://www.google.com.hk/search?q=" },
+    { id: 2, text: `Bing`, url: "https://cn.bing.com/search?q=" },
+    { id: 3, text: `Baidu`, url: "https://www.baidu.com/s?ie=utf-8&word=" },
+  ];
+  let selected;
+  let question = "";
+  function handleSearch() {
+    console.log("search:", question);
+    console.log("selected:", selected.id, selected.text);
+    goto(selected.url + question);
+  }
+</script>
+
+<form
   class=" bg-white rounded flex items-center p-3 shadow-sm border border-gray-200"
+  on:submit|preventDefault={handleSearch}
 >
-  <button class="outline-none focus:outline-none"
+  <button class="outline-none focus:outline-none" type="submit"
     ><svg
       class="w-5 text-gray-600 h-5 cursor-pointer"
       fill="none"
@@ -14,15 +31,20 @@
     ></button
   >
   <input
+    bind:value={question}
     type="search"
     placeholder="Search"
     class="w-80 pl-4 text-sm outline-none focus:outline-none bg-transparent"
   />
-  <div class="select">
-    <select class="text-sm outline-none focus:outline-none bg-transparent">
-      <option value="Google" selected>Google</option>
-      <option value="Bing">Bing</option>
-      <option value="Baidu">Baidu</option>
-    </select>
-  </div>
-</div>
+
+  <select
+    class="text-sm outline-none focus:outline-none bg-transparent"
+    bind:value={selected}
+  >
+    {#each searchEngines as engine}
+      <option value={engine}>
+        {engine.text}
+      </option>
+    {/each}
+  </select>
+</form>
