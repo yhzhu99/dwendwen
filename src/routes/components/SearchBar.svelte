@@ -4,7 +4,7 @@
     { id: 1, text: `Google`, url: "https://www.google.com.hk/search?q=", home: "https://www.google.com.hk"},
     { id: 2, text: `Bing`, url: "https://cn.bing.com/search?q=" , home:"https://cn.bing.com"},
     { id: 3, text: `Baidu`, url: "https://www.baidu.com/s?ie=utf-8&word=", home: "https://www.baidu.com"},
-    { id: 4, text: `Google Scholar`, url: "https://scholar.google.com/scholar?q=", home: "https://scholar.google.com"},
+    { id: 4, text: `GoogleScholar`, url: "https://scholar.google.com/scholar?q=", home: "https://scholar.google.com"},
     { id: 5, text: `GitHub`, url: "https://github.com/search?q=", home: "https://github.com"},
     { id: 6, text: `arXiv`, url: "https://arxiv.org/search/?searchtype=all&source=header&query=",  home: "https://arxiv.org"},
     { id: 7, text: `ReadPaper`, url: "https://readpaper.com/search/", home: "https://readpaper.com"},
@@ -42,15 +42,15 @@
     bind:value={question}
     type="search"
     placeholder="Search"
-    class="w-80 pl-4 text-sm outline-none focus:outline-none bg-transparent"
+    class="w-80 pl-4 text-sm outline-none focus:outline-none bg-transparent font-mono"
   />
 
   <select
-    class="text-sm outline-none focus:outline-none bg-transparent"
+    class="text-sm outline-none focus:outline-none bg-transparent font-mono"
     bind:value={selected}
   >
     {#each searchEngines as engine}
-      <option value={engine}>
+      <option value={engine} class="font-mono">
         {engine.text}
       </option>
     {/each}

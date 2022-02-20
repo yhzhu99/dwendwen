@@ -42,9 +42,9 @@
   </div>
 
   <footer class="place-self-end mr-5">
-    <div class="text-center p-2 text-sm rounded bg-sky-500/[.2]">
-      <span class="text-white">© 2022 Copyright: </span>
-      <a class="text-white" href="https://github.com/TualatinX">Yinghao Zhu</a>
+    <div class="text-center p-2 text-white text-sm font-mono rounded bg-sky-500/[.2]">
+      <span>© 2022 Copyright: </span>
+      <a href="https://github.com/TualatinX">Yinghao Zhu</a>
     </div>  
   </footer>
 </main>
