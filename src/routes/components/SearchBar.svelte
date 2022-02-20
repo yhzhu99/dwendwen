@@ -6,6 +6,8 @@
     { id: 3, text: `Baidu`, url: "https://www.baidu.com/s?ie=utf-8&word=" },
     { id: 4, text: `Google Scholar`, url: "https://scholar.google.com/scholar?q=" },
     { id: 5, text: `GitHub`, url: "https://github.com/search?q=" },
+    { id: 6, text: `arXiv`, url: "https://arxiv.org/search/?searchtype=all&source=header&query=" },
+    { id: 7, text: `ReadPaper`, url: "https://readpaper.com/search/" },
   ];
   let selected;
   let question = "";
