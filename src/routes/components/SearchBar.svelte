@@ -8,6 +8,7 @@
     { id: 5, text: `GitHub`, url: "https://github.com/search?q=", home: "https://github.com"},
     { id: 6, text: `arXiv`, url: "https://arxiv.org/search/?searchtype=all&source=header&query=",  home: "https://arxiv.org"},
     { id: 7, text: `ReadPaper`, url: "https://readpaper.com/search/", home: "https://readpaper.com"},
+    { id: 8, text: `Sci-Hub`, url: "https://sci-hub.se/", home: "https://sci-hub.se/"},
   ];
   let selected;
   let question = "";
