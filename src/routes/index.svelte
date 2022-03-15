@@ -57,6 +57,8 @@
     <div class="text-center p-2 text-white text-sm font-mono rounded bg-sky-500/[.2]">
       <span>© 2022 Copyright: </span>
       <a href="https://github.com/TualatinX">Yinghao Zhu</a>
+      |
+      <a href="https://beian.miit.gov.cn">沪ICP备2021021645号-2</a>
     </div>  
   </footer>
 </main>
