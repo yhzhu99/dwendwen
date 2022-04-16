@@ -59,6 +59,8 @@
       <a href="https://github.com/TualatinX">Yinghao Zhu</a>
       |
       <a href="https://beian.miit.gov.cn">沪ICP备2021021645号-2</a>
+      |
+      <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402009590">沪公网安备31010402009590号</a>
     </div>  
   </footer>
 </main>
