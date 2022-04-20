@@ -39,7 +39,7 @@
 
     {#if showBingDwenDwen}
       <canvas height="1262" id="mainCanvas" width="1068" class="mr-5"
-        >Your browser does not support the HTML5 CANVAS tag!</canvas
+        >墩墩起始页由朱英豪开发,冰墩墩主题,整合了多个学术搜索引擎,便捷好用,一起向未来!</canvas
       >
     {/if}
 
